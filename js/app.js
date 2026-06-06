@@ -50,7 +50,6 @@ function initStickyHeader() {
 function initMobileMenu() {
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
-    const navLinks = document.querySelectorAll('.nav-link');
     
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', () => {
@@ -62,8 +61,9 @@ function initMobileMenu() {
             }
         });
         
-        // Close menu when a link is clicked
-        navLinks.forEach(link => {
+        // Close menu when any link or action button inside the menu list is clicked
+        const menuAnchors = navMenu.querySelectorAll('a');
+        menuAnchors.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 const icon = menuToggle.querySelector('i');

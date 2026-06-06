@@ -23,6 +23,7 @@ function initDashboard() {
     const dbModal = document.getElementById('dashboardModal');
     const closeDbBtn = document.getElementById('closeDashboardBtn');
     const openDbBtn = document.getElementById('openDashboardBtn');
+    const openDbBtnMobile = document.getElementById('openDashboardBtnMobile');
     const sidebarMenuItems = document.querySelectorAll('.db-menu-item');
     const panels = document.querySelectorAll('.db-panel-content');
     const logoutBtn = document.getElementById('logoutBtn');
@@ -36,17 +37,22 @@ function initDashboard() {
         showDashboardModal();
     };
 
+    const handleOpenPortal = (e) => {
+        e.preventDefault();
+        if (currentUser) {
+            renderDashboard();
+            showDashboardModal();
+        } else {
+            showLoginPanel();
+            showDashboardModal();
+        }
+    };
+
     if (openDbBtn) {
-        openDbBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (currentUser) {
-                renderDashboard();
-                showDashboardModal();
-            } else {
-                showLoginPanel();
-                showDashboardModal();
-            }
-        });
+        openDbBtn.addEventListener('click', handleOpenPortal);
+    }
+    if (openDbBtnMobile) {
+        openDbBtnMobile.addEventListener('click', handleOpenPortal);
     }
 
     if (closeDbBtn) {
