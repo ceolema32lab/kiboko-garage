@@ -303,8 +303,9 @@ img {
 
 .logo-img {
     height: 54px;
-    width: auto;
-    object-fit: contain;
+    width: 54px;
+    min-width: 54px;
+    object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--accent-orange);
     padding: 2px;
@@ -422,6 +423,39 @@ img {
     .header .nav-actions .btn-primary,
     .header .nav-actions .btn-secondary:not(#langToggleBtn) {
         display: none !important;
+    }
+
+    .nav-actions {
+        gap: 8px !important;
+    }
+
+    #langToggleBtn {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+        gap: 4px !important;
+    }
+
+    #langToggleBtn .fa-earth-africa,
+    #langToggleBtn .fa-chevron-down {
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        display: none !important;
+    }
+    .logo-img {
+        height: 46px !important;
+        width: 46px !important;
+        min-width: 46px !important;
+    }
+    #langToggleBtn .fa-earth-africa,
+    #langToggleBtn .fa-chevron-down {
+        display: none !important;
+    }
+    #langToggleBtn {
+        padding: 6px 10px !important;
     }
 }
 
