@@ -4,6 +4,16 @@
 
 let currentUser = null;
 
+function escapeHTML(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initDashboard();
 });
@@ -259,12 +269,12 @@ function renderBookingTable(bookings) {
         const statusClass = b.status === 'completed' ? 'status-completed' : 'status-pending';
         return `
             <tr>
-                <td style="font-weight: 600; color: var(--accent-orange);">${b.id}</td>
-                <td>${b.vehicle}</td>
-                <td>${b.service}</td>
-                <td>${b.date}</td>
-                <td><span class="status-pill ${statusClass}">${b.status}</span></td>
-                <td style="font-weight: 600;">${b.cost}</td>
+                <td style="font-weight: 600; color: var(--accent-orange);">${escapeHTML(b.id)}</td>
+                <td>${escapeHTML(b.vehicle)}</td>
+                <td>${escapeHTML(b.service)}</td>
+                <td>${escapeHTML(b.date)}</td>
+                <td><span class="status-pill ${statusClass}">${escapeHTML(b.status)}</span></td>
+                <td style="font-weight: 600;">${escapeHTML(b.cost)}</td>
             </tr>
         `;
     }).join('');
@@ -292,12 +302,12 @@ function renderFleetList(vehicles) {
         
         return `
             <div class="fleet-vehicle-card">
-                <h3>${v.model}</h3>
-                <p>Vehicle ID: ${v.id}</p>
-                <p>Last Serviced: ${v.lastService}</p>
+                <h3>${escapeHTML(v.model)}</h3>
+                <p>Vehicle ID: ${escapeHTML(v.id)}</p>
+                <p>Last Serviced: ${escapeHTML(v.lastService)}</p>
                 <div class="fleet-vehicle-health">
                     <span class="health-dot ${healthClass}"></span>
-                    <span>Status: <strong>${healthLabel}</strong></span>
+                    <span>Status: <strong>${escapeHTML(healthLabel)}</strong></span>
                 </div>
             </div>
         `;

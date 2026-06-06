@@ -98,7 +98,12 @@ function initAiChat() {
     function appendMessage(text, type) {
         const msg = document.createElement('div');
         msg.className = `chat-msg chat-msg-${type}`;
-        msg.innerHTML = text;
+        if (type === 'sent') {
+            msg.textContent = text;
+        } else {
+            // Support simple bold markdown securely for predefined system answers
+            msg.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        }
         chatMessages.appendChild(msg);
         scrollToBottom();
     }
