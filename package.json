@@ -1,0 +1,10 @@
+{
+  "name": "kiboko-garage",
+  "version": "1.0.0",
+  "description": "Kiboko Garage Official Premium Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y http-server -p 3000"
+  },
+  "dependencies": {}
+}

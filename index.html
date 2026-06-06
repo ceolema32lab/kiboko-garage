@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiboko Garage | Premium Automotive Service Center in Arusha, Tanzania</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Kiboko Garage in Unga Ltd Area, Arusha offers world-class vehicle repair, diagnostics, engine overhaul, suspension repair, and corporate fleet maintenance. Professional mechanics you can trust.">
+    <meta name="keywords" content="Kiboko Garage, garage in Arusha, car repair Tanzania, auto mechanic Arusha, car diagnostics Unga Ltd, fleet maintenance Arusha, engine repair Arusha">
+    <meta name="author" content="Kiboko Garage">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Kiboko Garage | Premium Automotive Service Center">
+    <meta property="og:description" content="World-class vehicle repair, diagnostics, and fleet services in Arusha, Tanzania. Brand reliability and professional care.">
+    <meta property="og:image" content="assets/hero_bg.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- FontAwesome & Ionicons via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         1. STICKY HEADER
+         ========================================== -->
+    <header class="header">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="assets/logo.png" alt="Kiboko Garage Logo" class="logo-img">
+                KIBOKO <span>Garage</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-i18n="nav-home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav-about">About Us</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav-services">Services</a></li>
+                <li><a href="#estimator" class="nav-link" data-i18n="nav-estimator">Estimator</a></li>
+                <li><a href="#gallery" class="nav-link" data-i18n="nav-gallery">Gallery</a></li>
+                <li><a href="#faq" class="nav-link" data-i18n="nav-faqs">FAQs</a></li>
+                <li><a href="#booking" class="nav-link" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="#" class="btn btn-secondary" id="openDashboardBtn" style="padding: 10px 20px; font-size: 13.5px;" data-i18n="btn-portal">
+                    <i class="fa-solid fa-user-shield"></i> Portal
+                </a>
+                <a href="#booking" class="btn btn-primary" style="padding: 10px 20px; font-size: 13.5px;" data-i18n="btn-book-now">Book Now</a>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         2. HERO SECTION
+         ========================================== -->
+    <section id="home" class="hero">
+        <div class="hero-bg-wrapper">
+            <img src="assets/hero_bg.jpg" alt="Premium Garage Interior" class="hero-bg-img">
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" data-i18n="hero-badge">
+                    <i class="fa-solid fa-award"></i> Premium Automotive Excellence
+                </div>
+                <h1 class="hero-title text-gradient" data-i18n="hero-title">Your Vehicle Deserves the Best Care.</h1>
+                <p class="hero-desc" data-i18n="hero-desc">Professional vehicle repair, precision diagnostics, maintenance, and fleet management services in Arusha, Tanzania.</p>
+                
+                <div class="hero-btns">
+                    <a href="#booking" class="btn btn-primary" data-i18n="btn-book-service"><i class="fa-solid fa-calendar-check"></i> Book Service</a>
+                    <a href="tel:+255754555111" class="btn btn-secondary" data-i18n="btn-call-now"><i class="fa-solid fa-phone"></i> Call Now</a>
+                </div>
+                
+                <div class="hero-badges-grid">
+                    <div class="hero-badge-card">
+                        <h4><span class="counter-val" data-target="15">0</span>+</h4>
+                        <p data-i18n="stat-experience">Years Experience</p>
+                    </div>
+                    <div class="hero-badge-card">
+                        <h4><span class="counter-val" data-target="10000">0</span>+</h4>
+                        <p data-i18n="stat-serviced">Cars Serviced</p>
+                    </div>
+                    <div class="hero-badge-card">
+                        <h4><span class="counter-val" data-target="99">0</span>%</h4>
+                        <p data-i18n="stat-satisfaction">Satisfaction Rate</p>
+                    </div>
+                    <div class="hero-badge-card">
+                        <h4><span class="counter-val" data-target="25">0</span>+</h4>
+                        <p data-i18n="stat-mechanics">Expert Mechanics</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-widget">
+                <h3 class="widget-title" data-i18n="quick-book-title"><i class="fa-solid fa-wrench text-orange"></i> Quick Booking</h3>
+                <form id="heroBookingForm">
+                    <div class="form-group">
+                        <label for="heroName" data-i18n="lbl-fullname">FullName *</label>
+                        <input type="text" id="heroName" name="name" class="form-control" placeholder="E.g., Juma Hamisi" required data-i18n="lbl-fullname">
+                    </div>
+                    <div class="form-row" style="margin-bottom: 0;">
+                        <div class="form-group">
+                            <label for="heroPhone" data-i18n="lbl-phone">Phone Number *</label>
+                            <input type="tel" id="heroPhone" name="phone" class="form-control" placeholder="+255..." required data-i18n="lbl-phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="heroVehicle" data-i18n="lbl-vehicle-model">Vehicle Model *</label>
+                            <input type="text" id="heroVehicle" name="vehicle" class="form-control" placeholder="Toyota Hilux, Landcruiser..." required data-i18n="lbl-vehicle-model">
+                        </div>
+                    </div>
+                    <div class="form-row" style="margin-bottom: 0;">
+                        <div class="form-group">
+                            <label for="heroService" data-i18n="lbl-service">Service *</label>
+                            <select id="heroService" name="service" class="form-control" required style="background-color: #1e1e1e;">
+                                <option value="" disabled selected data-i18n="opt-select-service">Select Service</option>
+                                <option value="computer-diagnostics" data-i18n="opt-diagnostics">Computer Diagnostics</option>
+                                <option value="oil-change" data-i18n="opt-oil">Oil Change & Filter</option>
+                                <option value="brake-services" data-i18n="opt-brakes">Brake Services</option>
+                                <option value="engine-repair" data-i18n="opt-engine">Engine Repair</option>
+                                <option value="suspension-repair" data-i18n="opt-suspension">Suspension Repair</option>
+                                <option value="fleet-maintenance" data-i18n="opt-fleet">Fleet Maintenance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="heroDate" data-i18n="lbl-pref-date">Preferred Date *</label>
+                            <input type="date" id="heroDate" name="date" class="form-control" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-i18n="btn-quick-book">
+                        <i class="fa-solid fa-circle-check"></i> Book Appointment
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         3. ABOUT US SECTION
+         ========================================== -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-media">
+                    <div class="about-img-card about-img-tall">
+                        <img src="assets/about_1.jpg" alt="Mechanic Diagnostic Check">
+                    </div>
+                    <div class="about-img-card about-img-wide">
+                        <img src="assets/about_2.jpg" alt="Luxury Car Repair">
+                    </div>
+                    <div class="about-badge">
+                        <span class="years"><span class="counter-val" data-target="15">0</span>+</span>
+                        <span class="label" data-i18n="badge-trust">Years of Trust</span>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <span class="section-tag" data-i18n="about-tag">About Kiboko Garage</span>
+                    <h2 class="section-title text-gradient" data-i18n="about-title">African Excellence in Automotive Service</h2>
+                    <p class="section-desc" style="font-size: 16px; margin-bottom: 24px;" data-i18n="about-desc">Located in the Unga Ltd Area of Arusha, Kiboko Garage is a premier vehicle repair and fleet maintenance facility. We cater to individual car owners, corporate clients, and fleet operators who seek uncompromising precision, premium service, and long-term vehicle reliability.</p>
+                    
+                    <div class="about-tabs">
+                        <div class="about-tab-btn active" onclick="switchAboutTab('tab-mission')" data-i18n="tab-mission">Mission</div>
+                        <div class="about-tab-btn" onclick="switchAboutTab('tab-vision')" data-i18n="tab-vision">Vision</div>
+                        <div class="about-tab-btn" onclick="switchAboutTab('tab-values')" data-i18n="tab-commitment">Commitment</div>
+                    </div>
+                    
+                    <div id="tab-mission" class="about-tab-content active">
+                        <p style="color: var(--text-secondary); font-size: 14.5px;" data-i18n="mission-text">To provide premium, reliable, and accessible automotive solutions by combining modern technology with expert diagnostics, ensuring every motorist in East Africa experiences safe and hassle-free journeys.</p>
+                    </div>
+                    <div id="tab-vision" class="about-tab-content">
+                        <p style="color: var(--text-secondary); font-size: 14.5px;" data-i18n="vision-text">To become the leading center of automotive repair and vehicle fleet management in Tanzania, recognized for integrity, customer-centric support, and absolute technical excellence.</p>
+                    </div>
+                    <div id="tab-values" class="about-tab-content">
+                        <p style="color: var(--text-secondary); font-size: 14.5px;" data-i18n="commitment-text">We promise transparency in our cost estimations, a strict policy of utilizing only genuine OEM spare parts, and keeping turnaround times as fast as possible to keep your vehicles on the road.</p>
+                    </div>
+                    
+                    <div class="core-values">
+                        <div class="value-item">
+                            <i class="fa-solid fa-shield-check text-orange"></i>
+                            <div>
+                                <h4 data-i18n="val-mechanics">Certified Mechanics</h4>
+                                <p data-i18n="val-mechanics-desc">Trained to handle luxury & fleet cars.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <i class="fa-solid fa-microchip text-orange"></i>
+                            <div>
+                                <h4 data-i18n="val-diag">Advanced Diagnostics</h4>
+                                <p data-i18n="val-diag-desc">Quickly identifying hidden faults.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         4. OUR SERVICES
+         ========================================== -->
+    <section id="services" class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="services-tag">What We Do</span>
+                <h2 class="section-title text-gradient" data-i18n="services-title">Our Professional Services</h2>
+                <p class="section-desc" data-i18n="services-desc">From complex engine restorations to computerized diagnostics, we offer comprehensive services to keep your vehicle performing at its peak.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- 1. Engine Repair -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3 data-i18n="srv-engine">Engine Repair</h3>
+                    <p data-i18n="srv-engine-desc">Complete overhauls, cylinder head repairs, cooling systems, and tuning for optimal performance.</p>
+                    <span class="learn-more" onclick="scrollToBooking('engine-repair')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 2. Computer Diagnostics -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3 data-i18n="srv-diag">Computer Diagnostics</h3>
+                    <p data-i18n="srv-diag-desc">Precise scanning of ECUs, sensors, and electronic faults to pinpoint exact vehicle issues.</p>
+                    <span class="learn-more" onclick="scrollToBooking('computer-diagnostics')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 3. Brake Services -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-circle-notch"></i></div>
+                    <h3 data-i18n="srv-brakes">Brake Services</h3>
+                    <p data-i18n="srv-brakes-desc">Brake pad replacement, rotor machining, fluid flushes, and ABS system repair for secure stopping power.</p>
+                    <span class="learn-more" onclick="scrollToBooking('brake-services')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 4. Suspension Repair -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 data-i18n="srv-suspension">Suspension Repair</h3>
+                    <p data-i18n="srv-suspension-desc">Shock absorbers, struts, bushings, ball joints, and steering system repair for a smooth ride.</p>
+                    <span class="learn-more" onclick="scrollToBooking('suspension-repair')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 5. Oil Change -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h3 data-i18n="srv-oil">Oil Change</h3>
+                    <p data-i18n="srv-oil-desc">Premium engine oil and filter replacement, fluid check, and service counter resets.</p>
+                    <span class="learn-more" onclick="scrollToBooking('oil-change')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 6. Battery Services -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-car-battery"></i></div>
+                    <h3 data-i18n="srv-battery">Battery Services</h3>
+                    <p data-i18n="srv-battery-desc">Battery testing, terminal cleaning, replacement, and alternator diagnostics.</p>
+                    <span class="learn-more" onclick="scrollToBooking('battery-services')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 7. Electrical Repairs -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 data-i18n="srv-electrical">Electrical Repairs</h3>
+                    <p data-i18n="srv-electrical-desc">Wiring diagnostics, lighting systems, alternator and starter motor repairs.</p>
+                    <span class="learn-more" onclick="scrollToBooking('electrical-repairs')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 8. Transmission Services -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-cog"></i></div>
+                    <h3 data-i18n="srv-transmission">Transmission Services</h3>
+                    <p data-i18n="srv-transmission-desc">Gearbox fluid flush, clutch kit installations, and mechanical gearbox rebuilds.</p>
+                    <span class="learn-more" onclick="scrollToBooking('transmission-services')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 9. Tire Services -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-ring"></i></div>
+                    <h3 data-i18n="srv-tire">Tire Services</h3>
+                    <p data-i18n="srv-tire-desc">Wheel alignment, balancing, tire rotation, and tread inspection.</p>
+                    <span class="learn-more" onclick="scrollToBooking('tire-services')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 10. Vehicle Inspection -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <h3 data-i18n="srv-inspection">Vehicle Inspection</h3>
+                    <p data-i18n="srv-inspection-desc">Pre-purchase and periodic safety audits covering over 100 points on the vehicle.</p>
+                    <span class="learn-more" onclick="scrollToBooking('vehicle-inspection')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 11. Fleet Maintenance -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-truck"></i></div>
+                    <h3 data-i18n="srv-fleet">Fleet Maintenance</h3>
+                    <p data-i18n="srv-fleet-desc">Custom maintenance programs tailored for commercial fleets, pickups, and corporate vehicles.</p>
+                    <span class="learn-more" onclick="scrollToBooking('fleet-maintenance')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <!-- 12. Emergency Assistance -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-truck-pickup"></i></div>
+                    <h3 data-i18n="srv-emergency">Emergency Assistance</h3>
+                    <p data-i18n="srv-emergency-desc">24/7 roadside assistance, towing, and onsite troubleshooting across Arusha region.</p>
+                    <span class="learn-more" onclick="scrollToBooking('emergency-assistance')"><span data-i18n="learn-more">Learn More</span> <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         5. WHY CHOOSE US
+         ========================================== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="why-grid">
+                <div>
+                    <span class="section-tag" data-i18n="why-tag">Why Choose Us</span>
+                    <h2 class="section-title text-gradient" data-i18n="why-title">Built on Professionalism and Trust</h2>
+                    <p class="section-desc" style="font-size: 16px; margin-bottom: 35px;" data-i18n="why-desc">We differentiate ourselves through transparency, tooling quality, and strict standards of mechanic certifications. Whether you manage a logistics fleet or drive a personal SUV, you can count on Kiboko Garage.</p>
+                    
+                    <div class="why-stats">
+                        <div class="stats-bar-group">
+                            <div class="stats-bar-info">
+                                <span data-i18n="why-diag-acc">Diagnostic Accuracy</span>
+                                <span>99%</span>
+                            </div>
+                            <div class="stats-bar-container">
+                                <div class="stats-bar-fill" style="width: 99%;"></div>
+                            </div>
+                        </div>
+                        <div class="stats-bar-group">
+                            <div class="stats-bar-info">
+                                <span data-i18n="why-on-time">On-Time Service Delivery</span>
+                                <span>96%</span>
+                            </div>
+                            <div class="stats-bar-container">
+                                <div class="stats-bar-fill" style="width: 96%;"></div>
+                            </div>
+                        </div>
+                        <div class="stats-bar-group">
+                            <div class="stats-bar-info">
+                                <span data-i18n="why-gen-parts">Genuine Parts Policy</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="stats-bar-container">
+                                <div class="stats-bar-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="why-features">
+                    <div class="why-card">
+                        <i class="fa-solid fa-user-gear"></i>
+                        <h4 data-i18n="feat-cert">Certified Mechanics</h4>
+                        <p data-i18n="feat-cert-desc">Fully trained in vehicle management, diagnostics, and component rebuilding.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h4 data-i18n="feat-equip">Modern Equipment</h4>
+                        <p data-i18n="feat-equip-desc">Cutting-edge scanners and diagnostic tools identical to brand dealerships.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <h4 data-i18n="feat-time">Fast Turnaround</h4>
+                        <p data-i18n="feat-time-desc">Our organized bays and parts sourcing ensure your vehicle spends minimal time off the road.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <h4 data-i18n="feat-price">Affordable Pricing</h4>
+                        <p data-i18n="feat-price-desc">Fair, transparent pricing for premium garage workmanship in Arusha.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         6. WORK PROCESS
+         ========================================== -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="process-tag">How We Work</span>
+                <h2 class="section-title text-gradient" data-i18n="process-title">Our Service Work Process</h2>
+                <p class="section-desc" data-i18n="process-desc">A professional 4-step workflow that ensures precision, reliability, and full quality accountability for every vehicle.</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <h3 data-i18n="step-insp">Inspection</h3>
+                    <p data-i18n="step-insp-desc">Visual and mechanical checking of your vehicle to check the reported symptoms.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <h3 data-i18n="step-diag">Diagnosis</h3>
+                    <p data-i18n="step-diag-desc">Computerized error scan combined with mechanic road checks to identify the root issue.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <h3 data-i18n="step-repair">Repair & Service</h3>
+                    <p data-i18n="step-repair-desc">Precision repair work using specialized tools and genuine OEM replacements.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <h3 data-i18n="step-check">Quality Check</h3>
+                    <p data-i18n="step-check-desc">Supervised road testing and secondary scan before washing and returning the vehicle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         EXTRA: BEFORE & AFTER SHOWCASE
+         ========================================== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="showcase-tag">Quality Restorations</span>
+                <h2 class="section-title text-gradient" data-i18n="showcase-title">Before & After Showcase</h2>
+                <p class="section-desc" data-i18n="showcase-desc">Drag the slider left and right to see our vehicle repair and component restoration work in action.</p>
+            </div>
+            
+            <div class="showcase-slider">
+                <img src="assets/before_after_after.jpg" alt="After Restored Component" class="slider-img img-before">
+                <div class="img-after">
+                    <img src="assets/before_after_before.jpg" alt="Before Damaged Component" class="slider-img">
+                </div>
+                <div class="slider-handle">
+                    <div class="slider-button">
+                        <i class="fa-solid fa-arrows-left-right"></i>
+                    </div>
+                </div>
+                <span class="slider-label label-before" data-i18n="label-restored">Restored (After)</span>
+                <span class="slider-label label-after" data-i18n="label-worn">Worn out (Before)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         EXTRA: COST ESTIMATOR WIDGET
+         ========================================== -->
+    <section id="estimator" class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="est-tag">Instant Pricing</span>
+                <h2 class="section-title text-gradient" data-i18n="est-title">Service Cost Estimator</h2>
+                <p class="section-desc" data-i18n="est-desc">Select your services and vehicle type to obtain a realistic cost range in TZS and USD instantly.</p>
+            </div>
+            
+            <div class="estimator-box">
+                <div class="estimator-grid">
+                    <div class="estimator-options">
+                        <div class="form-group">
+                            <label for="estimatorVehicleType" data-i18n="lbl-veh-class">Vehicle Class *</label>
+                            <select id="estimatorVehicleType" class="form-control" style="background-color: var(--bg-surface);">
+                                <option value="sedan" data-i18n="opt-sedan">Sedan / Hatchback (Standard Rate)</option>
+                                <option value="suv" data-i18n="opt-suv">SUV / Pickup Truck (1.25x Modifier)</option>
+                                <option value="luxury" data-i18n="opt-luxury">Luxury / Sports Brand (1.55x Modifier)</option>
+                                <option value="commercial" data-i18n="opt-commercial">Commercial / Fleet Truck (1.35x Modifier)</option>
+                            </select>
+                        </div>
+                        
+                        <label class="form-group label" data-i18n="lbl-services-req">Select Services Required</label>
+                        <div class="estimator-services-list">
+                            <div class="estimator-checkbox-card">
+                                <input type="checkbox" id="est-diag" class="estimator-checkbox" data-service="computer-diagnostics">
+                                <span class="service-name" data-i18n="srv-diag">Computer Diagnostics</span>
+                            </div>
+                            <div class="estimator-checkbox-card">
+                                <input type="checkbox" id="est-oil" class="estimator-checkbox" data-service="oil-change">
+                                <span class="service-name" data-i18n="srv-oil">Oil Change & Filter</span>
+                            </div>
+                            <div class="estimator-checkbox-card">
+                                <input type="checkbox" id="est-brake" class="estimator-checkbox" data-service="brake-services">
+                                <span class="service-name" data-i18n="srv-brakes">Brake Pad & Rotor check</span>
+                            </div>
+                            <div class="estimator-checkbox-card">
+                                <input type="checkbox" id="est-susp" class="estimator-checkbox" data-service="suspension-repair">
+                                <span class="service-name" data-i18n="srv-suspension">Suspension Repair</span>
+                            </div>
+                            <div class="estimator-checkbox-card">
+                                <input type="checkbox" id="est-engine" class="estimator-checkbox" data-service="engine-repair">
+                                <span class="service-name" data-i18n="srv-engine">Engine Repair / Overhaul</span>
+                            </div>
+                            <div class="estimator-checkbox-card">
+                                <input type="checkbox" id="est-battery" class="estimator-checkbox" data-service="battery-services">
+                                <span class="service-name" data-i18n="srv-battery">Battery Service</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="estimator-result">
+                        <h4 data-i18n="est-price-title">Calculated Estimate Range</h4>
+                        <div class="estimator-price" id="estimatorPriceTzs">TZS 0</div>
+                        <div class="estimator-price-usd" id="estimatorPriceUsd">$0</div>
+                        <p class="estimator-summary-text" data-i18n="est-price-notice">* Ranges represent estimated mechanic hours and standard OEM spare parts. Final quotes require physical garage inspections.</p>
+                        <button class="btn btn-primary" id="bookEstimateBtn" data-i18n="btn-book-est">
+                            <i class="fa-solid fa-calendar-plus"></i> Book this Estimate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         7. GALLERY SECTION
+         ========================================== -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="gallery-tag">Workshop Photos</span>
+                <h2 class="section-title text-gradient" data-i18n="gallery-title">Inside Our Workshop</h2>
+                <p class="section-desc" data-i18n="gallery-desc">Take a look inside Kiboko Garage to see our mechanics, high-end equipment, and clean working environment.</p>
+            </div>
+            
+            <div class="gallery-filter">
+                <div class="gallery-filter-btn active" data-filter="all" data-i18n="filter-all">All Photos</div>
+                <div class="gallery-filter-btn" data-filter="workshop" data-i18n="filter-workshop">Workshop</div>
+                <div class="gallery-filter-btn" data-filter="diagnostics" data-i18n="filter-diagnostics">Diagnostics</div>
+                <div class="gallery-filter-btn" data-filter="mechanics" data-i18n="filter-mechanics">Mechanics</div>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="workshop">
+                    <img src="assets/gallery_1.jpg" alt="Engine Overhaul">
+                    <div class="gallery-overlay">
+                        <h3>Engine Refurbishment</h3>
+                        <p>Workshop</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="diagnostics">
+                    <img src="assets/gallery_2.jpg" alt="Computer Diagnosis">
+                    <div class="gallery-overlay">
+                        <h3>Computer Diagnostics Scan</h3>
+                        <p>Diagnostics</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="workshop">
+                    <img src="assets/gallery_3.jpg" alt="Luxury Car Work">
+                    <div class="gallery-overlay">
+                        <h3>Luxury Suspension Adjust</h3>
+                        <p>Workshop</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="mechanics">
+                    <img src="assets/gallery_4.jpg" alt="Mechanic replacing tires">
+                    <div class="gallery-overlay">
+                        <h3>Tire Alignment & Service</h3>
+                        <p>Mechanics</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="mechanics">
+                    <img src="assets/gallery_5.jpg" alt="Happy client with car">
+                    <div class="gallery-overlay">
+                        <h3>Client Vehicle Delivery</h3>
+                        <p>Mechanics</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="diagnostics">
+                    <img src="assets/gallery_6.jpg" alt="Battery Diagnostic Check">
+                    <div class="gallery-overlay">
+                        <h3>System Electrical Testing</h3>
+                        <p>Diagnostics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         8. TESTIMONIALS SECTION
+         ========================================== -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="reviews-tag">Client Reviews</span>
+                <h2 class="section-title text-gradient" data-i18n="reviews-title">What Our Customers Say</h2>
+                <p class="section-desc" data-i18n="reviews-desc">Trusted by hundreds of individual car owners and large corporate logistics teams in Arusha.</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <img src="assets/client_1.jpg" alt="David Minja" class="client-img">
+                            <div class="client-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Kiboko Garage resolved a persistent gear shifting fault on my Prado that two other garages in Arusha could not diagnose. Their computer diagnosis is highly accurate and pricing is transparent."</p>
+                            <h4 class="client-name">David Minja</h4>
+                            <p class="client-role">Toyota Landcruiser Owner</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <img src="assets/client_2.jpg" alt="Fatma S. Rashid" class="client-img">
+                            <div class="client-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"We have registered our distribution pickups under their Fleet Management Portal. Being able to see maintenance schedules and log vehicle health has reduced our breakdowns by 80%."</p>
+                            <h4 class="client-name">Fatma S. Rashid</h4>
+                            <p class="client-role">Fleet Logistics Manager</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <img src="assets/client_3.jpg" alt="John Muro" class="client-img">
+                            <div class="client-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Outstanding customer service. They picked up my vehicle from my office in Arusha center, replaced the shock absorbers, performed wheel alignment, and delivered it clean before the end of the day."</p>
+                            <h4 class="client-name">John Muro</h4>
+                            <p class="client-role">Mercedes-Benz E-Class Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonials-nav">
+                    <div class="testimonial-nav-btn" id="prevTestimonial"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="testimonial-nav-btn" id="nextTestimonial"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         9. FAQ SECTION
+         ========================================== -->
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="faq-tag">Common Inquiries</span>
+                <h2 class="section-title text-gradient" data-i18n="faq-title">Frequently Asked Questions</h2>
+                <p class="section-desc" data-i18n="faq-desc">Got questions about our spare parts, booking process, or fleet services? Find answers below.</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>Do you service all vehicle brands?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Yes, our certified mechanics are fully trained to service Japanese, European, and American vehicle makes, including Toyota, Ford, Nissan, Mercedes-Benz, BMW, and commercial trucks.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>How long does a computer diagnostics scan take?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            A standard computer scan and ECU fault retrieval takes approximately 30 to 45 minutes. Our mechanics will then explain the diagnostic report and present repair recommendations.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>Do you use genuine OEM spare parts?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Yes. We strictly utilize genuine Original Equipment Manufacturer (OEM) or high-quality certified aftermarket spares. We offer warranty on spare parts procured and fitted by our workshop.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>Can I schedule my appointment online?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Yes! You can use our online Booking Portal or Hero Widget to select dates and times. You will receive an instant booking ID, and you can log in to view your service history from the client dashboard.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <span>Do you provide fleet services for corporate clients?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Absolutely. We provide contract-based fleet maintenance programs for corporate offices, transport companies, and NGOs, complete with detailed health reports and monthly service accounts.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         10. CONTACT & BOOKING SECTION
+         ========================================== -->
+    <section id="booking" class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="contact-tag">Get In Touch</span>
+                <h2 class="section-title text-gradient" data-i18n="contact-title">Book Appointment & Contact Us</h2>
+                <p class="section-desc" data-i18n="contact-desc">Visit our state-of-the-art facility in Unga Ltd, Arusha or book your maintenance check online today.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact-loc-title">Workshop Location</h4>
+                            <p>UNGA LTD Area, Arusha, Tanzania</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact-phone-title">Phone Number</h4>
+                            <p><a href="tel:+255754555111">+255 754 555 111</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact-email-title">Email Address</h4>
+                            <p><a href="mailto:info@kibokogarage.com">info@kibokogarage.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact-hours-title">Business Hours</h4>
+                            <p data-i18n="contact-hours-desc">Monday - Saturday: 8:00 AM - 6:00 PM<br>Sunday: Emergency Towing Only</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15941.11116631899!2d36.6853246755458!3d-3.376882772591605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18472df3b9d62dcf%3A0xe54d924976451e06!2sUnga%20Ltd%2C%20Arusha!5e0!3m2!1sen!2stz!4v1700000000000!5m2!1sen!2stz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+                <div class="booking-panel">
+                    <h3 style="font-size: 24px; margin-bottom: 24px;" data-i18n="booking-form-title"><i class="fa-solid fa-calendar-days text-orange"></i> Schedule a Service</h3>
+                    <form id="mainBookingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingName" data-i18n="lbl-booking-name">Your Name *</label>
+                                <input type="text" id="bookingName" class="form-control" placeholder="E.g., Juma Hamisi" required data-i18n="lbl-booking-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingPhone" data-i18n="lbl-phone">Phone Number *</label>
+                                <input type="tel" id="bookingPhone" class="form-control" placeholder="E.g., +255 754 555 111" required data-i18n="lbl-phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingEmail" data-i18n="lbl-booking-email">Email Address</label>
+                                <input type="email" id="bookingEmail" class="form-control" placeholder="E.g., client@email.com" data-i18n="lbl-booking-email">
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingVehicle" data-i18n="lbl-booking-vehicle">Vehicle Model & License Plate *</label>
+                                <input type="text" id="bookingVehicle" class="form-control" placeholder="E.g., Toyota Vanguard (T 402 CXD)" required data-i18n="lbl-booking-vehicle">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingVehicleType" data-i18n="lbl-booking-class">Vehicle Class *</label>
+                                <select id="bookingVehicleType" class="form-control" style="background-color: var(--bg-primary);">
+                                    <option value="sedan" data-i18n="opt-sedan">Sedan / Hatchback</option>
+                                    <option value="suv" data-i18n="opt-suv">SUV / Crossover</option>
+                                    <option value="luxury" data-i18n="opt-luxury">Luxury / Sports Car</option>
+                                    <option value="commercial" data-i18n="opt-commercial">Commercial Truck / Pick-up</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingService" data-i18n="lbl-booking-core-srv">Select Core Service *</label>
+                                <select id="bookingService" class="form-control" style="background-color: var(--bg-primary);" required>
+                                    <option value="" disabled selected data-i18n="opt-select-service">Select Service</option>
+                                    <option value="engine-repair" data-i18n="srv-engine">Engine Repair</option>
+                                    <option value="computer-diagnostics" data-i18n="srv-diag">Computer Diagnostics</option>
+                                    <option value="brake-services" data-i18n="srv-brakes">Brake Services</option>
+                                    <option value="suspension-repair" data-i18n="srv-suspension">Suspension Repair</option>
+                                    <option value="oil-change" data-i18n="srv-oil">Oil Change</option>
+                                    <option value="battery-services" data-i18n="srv-battery">Battery Services</option>
+                                    <option value="electrical-repairs" data-i18n="srv-electrical">Electrical Repairs</option>
+                                    <option value="transmission-services" data-i18n="srv-transmission">Transmission Services</option>
+                                    <option value="tire-services" data-i18n="srv-tire">Tire Services</option>
+                                    <option value="vehicle-inspection" data-i18n="srv-inspection">Vehicle Inspection</option>
+                                    <option value="fleet-maintenance" data-i18n="srv-fleet">Fleet Maintenance</option>
+                                    <option value="emergency-assistance" data-i18n="srv-emergency">Emergency Assistance</option>
+                                    <option value="multiple">Multiple Selected Services</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingDate" data-i18n="lbl-booking-date">Preferred Appointment Date *</label>
+                                <input type="date" id="bookingDate" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingTime" data-i18n="lbl-booking-time">Preferred Time *</label>
+                                <input type="time" id="bookingTime" class="form-control" required value="09:00">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group-full">
+                            <label for="bookingMessage" data-i18n="lbl-booking-msg">Remarks / Symptoms Description</label>
+                            <textarea id="bookingMessage" class="form-control" rows="4" placeholder="E.g. Squeaking noise when braking, oil puddle under engine bay, or estimator cost booking summary..." data-i18n="lbl-booking-msg"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="btn-submit-booking">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Appointment Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         11. FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <img src="assets/logo.png" alt="Kiboko Garage Logo" class="logo-img">
+                        KIBOKO <span>Garage</span>
+                    </a>
+                    <p data-i18n="footer-desc">World-class automotive repairs, diagnostics, and preventative care. Serving individuals, businesses, and fleet operators in Arusha, Tanzania.</p>
+                    <div class="footer-socials">
+                        <a href="https://facebook.com/kibokogarage" target="_blank" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/kibokogarage" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/kibokogarage" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/kibokogarage" target="_blank" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer-col-links">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-i18n="nav-home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav-about">About Us</a></li>
+                        <li><a href="#services" data-i18n="nav-services">Our Services</a></li>
+                        <li><a href="#estimator" data-i18n="nav-estimator">Cost Estimator</a></li>
+                        <li><a href="#gallery" data-i18n="nav-gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer-col-services">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services" data-i18n="srv-diag">Engine Diagnostics</a></li>
+                        <li><a href="#services" data-i18n="srv-suspension">Suspension Systems</a></li>
+                        <li><a href="#services" data-i18n="srv-brakes">Brake Servicing</a></li>
+                        <li><a href="#services" data-i18n="srv-oil">Oil & Filter Change</a></li>
+                        <li><a href="#services" data-i18n="srv-fleet">Corporate Fleet Care</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-i18n="footer-col-newsletter">Newsletter</h3>
+                    <p style="color: var(--text-secondary); font-size: 13.5px;" data-i18n="newsletter-desc">Subscribe to receive automotive safety tips, maintenance alerts, and service discounts.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+                        <input type="email" placeholder="Your Email Address" class="newsletter-input" required>
+                        <button type="submit" class="btn btn-primary" style="padding: 10px 15px;"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-i18n="footer-copy">&copy; 2026 Kiboko Garage. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#faq" data-i18n="footer-privacy">Privacy Policy</a>
+                    <a href="#faq" data-i18n="footer-terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         EXTRA: CUSTOMER & FLEET PORTAL MODAL
+         ========================================== -->
+    <div class="modal-overlay" id="dashboardModal">
+        <div class="dashboard-modal-container">
+            <!-- Sidebar Navigation inside Modal -->
+            <div class="db-sidebar">
+                <div>
+                    <div class="db-profile-header">
+                        <div class="db-profile-avatar" id="dbProfileInitial">U</div>
+                        <div class="db-profile-info">
+                            <h4 id="dbProfileName">User Profile</h4>
+                            <p id="dbProfileType">Guest Access</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="db-menu">
+                        <li class="db-menu-item active" data-panel="dbOverview">
+                            <i class="fa-solid fa-chart-line"></i> Overview
+                        </li>
+                        <li class="db-menu-item" data-panel="dbHistory">
+                            <i class="fa-solid fa-clock-rotate-left"></i> Service History
+                        </li>
+                        <li class="db-menu-item" data-panel="dbFleet">
+                            <i class="fa-solid fa-truck-pickup"></i> Fleet Portal
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="db-logout" id="logoutBtn">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout Account
+                </div>
+            </div>
+            
+            <!-- Main Content Area inside Modal -->
+            <div class="db-main">
+                <div class="db-close-btn" id="closeDashboardBtn"><i class="fa-solid fa-xmark"></i></div>
+                
+                <!-- LOGIN SCREEN (simulated) -->
+                <div class="login-panel" id="loginContainer">
+                    <div class="login-logo">
+                        <img src="assets/logo.png" alt="Logo">
+                    </div>
+                    <h3>Kiboko Client Portal</h3>
+                    <p>Enter your details to track vehicle status, view service history, and manage your fleet list.</p>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginName">FullName / Company Name *</label>
+                            <input type="text" id="loginName" class="form-control" placeholder="E.g., Juma Hamisi" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPhone">Phone Number *</label>
+                            <input type="tel" id="loginPhone" class="form-control" placeholder="E.g., +255 754 555 111" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginType">Account Type</label>
+                            <select id="loginType" class="form-control" style="background-color: var(--bg-primary);">
+                                <option value="individual">Individual Car Owner</option>
+                                <option value="fleet">Corporate Fleet Operator</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                            Access Dashboard <i class="fa-solid fa-right-to-bracket"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- DASHBOARD MODULE CONTAINER -->
+                <div id="dashboardContainer" style="display: none; height: 100%;">
+                    
+                    <!-- TAB 1: OVERVIEW -->
+                    <div class="db-panel-content active" id="dbOverview">
+                        <div class="db-header">
+                            <h2>Welcome back to Kiboko Garage</h2>
+                            <p>Here is the status of your vehicle repair records and active bookings.</p>
+                        </div>
+                        
+                        <div class="db-stats-grid">
+                            <div class="db-stat-card">
+                                <span class="label">Registered Vehicles</span>
+                                <div class="db-stat-value" id="dbStatVehicles">0</div>
+                            </div>
+                            <div class="db-stat-card">
+                                <span class="label">Pending Services</span>
+                                <div class="db-stat-value" id="dbStatPending">0</div>
+                            </div>
+                            <div class="db-stat-card">
+                                <span class="label">Completed Services</span>
+                                <div class="db-stat-value" id="dbStatCompleted">0</div>
+                            </div>
+                        </div>
+                        
+                        <h3 style="font-size: 18px; margin-bottom: 16px;">Active Maintenance Timeline</h3>
+                        <div class="db-table-wrapper">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Booking ID</th>
+                                        <th>Vehicle Model</th>
+                                        <th>Core Service</th>
+                                        <th>Scheduled Date</th>
+                                        <th>Status</th>
+                                        <th>Estimated Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bookingTableBody">
+                                    <!-- Populated dynamically via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- TAB 2: HISTORY -->
+                    <div class="db-panel-content" id="dbHistory">
+                        <div class="db-header">
+                            <h2>Full Service History</h2>
+                            <p>Track all previous repair logs, safety checks, and completed orders at our workshop.</p>
+                        </div>
+                        
+                        <div class="db-table-wrapper">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Booking ID</th>
+                                        <th>Vehicle Model</th>
+                                        <th>Core Service</th>
+                                        <th>Scheduled Date</th>
+                                        <th>Status</th>
+                                        <th>Billing Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="historyTableBody">
+                                    <!-- Populated dynamically via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- TAB 3: FLEET PORTAL -->
+                    <div class="db-panel-content" id="dbFleet">
+                        <div class="db-header">
+                            <h2>Corporate Fleet Management</h2>
+                            <p>Track individual vehicle health metrics, service checks, and add new cars to your active fleet profile.</p>
+                        </div>
+                        
+                        <div class="fleet-controls">
+                            <h3 style="font-size: 18px;">Active Fleet List</h3>
+                        </div>
+                        
+                        <div class="fleet-vehicle-grid" id="fleetVehicleContainer">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                        
+                        <div class="glass-card" style="margin-top: 30px; padding: 24px;">
+                            <h3 style="font-size: 16px; margin-bottom: 16px;"><i class="fa-solid fa-plus text-orange"></i> Register New Vehicle</h3>
+                            <form id="addVehicleForm" style="display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 16px; align-items: flex-end;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label for="vehicleModel">Model & Make *</label>
+                                    <input type="text" id="vehicleModel" class="form-control" placeholder="E.g., Toyota Hilux" required style="background: var(--bg-primary);">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label for="vehicleLicense">License Plate Number *</label>
+                                    <input type="text" id="vehicleLicense" class="form-control" placeholder="E.g., T 829 DKA" required style="background: var(--bg-primary);">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label for="vehicleHealth">Current Health Status</label>
+                                    <select id="vehicleHealth" class="form-control" style="background: var(--bg-primary);">
+                                        <option value="good">Healthy (No service needed)</option>
+                                        <option value="warning">Service Warning (Schedule inspection)</option>
+                                        <option value="danger">Critical (Immediate repair needed)</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="padding: 12px 20px;">
+                                    Add Vehicle
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         EXTRA: GALLERY LIGHTBOX MODAL
+         ========================================== -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></div>
+        <img src="" alt="Lightbox Zoom" class="lightbox-content" id="lightboxImg">
+    </div>
+
+    <!-- ==========================================
+         EXTRA: AI ASSISTANT CHAT WIDGET
+         ========================================== -->
+    <div class="chat-widget">
+        <!-- Floating chat bubble -->
+        <div class="chat-bubble" id="chatBubble" title="AI Maintenance Assistant">
+            <i class="fa-solid fa-headset"></i>
+        </div>
+        
+        <!-- Expanded chat window -->
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-agent-info">
+                    <div class="chat-agent-avatar">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="chat-agent-name">
+                        <h4>Kiboko AI Diagnostic</h4>
+                        <div class="chat-agent-status">Online</div>
+                    </div>
+                </div>
+                <div class="chat-close-btn" id="chatClose"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            
+            <!-- Messages lists -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-msg chat-msg-received">
+                    Habari! I am Kiboko's AI Maintenance Assistant. Describe your vehicle symptoms (e.g. squeaking brakes, check engine light) and I will diagnostic-analyze them!
+                </div>
+            </div>
+            
+            <!-- Chat Input Area -->
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" class="chat-input" placeholder="Type car symptom...">
+                <button class="chat-send-btn" id="chatSendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         EXTRA: FLOATING WHATSAPP BUTTON
+         ========================================== -->
+    <a href="https://wa.me/255754555111?text=Hello%20Kiboko%20Garage,%20I%20would%20like%20to%20book%20a%20car%20service." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ==========================================
+         SCRIPTS LOADING
+         ========================================== -->
+    <script src="js/language.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/estimator.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/ai-assistant.js"></script>
+    
+    <script>
+        // Additional tab switcher logic for the About us section
+        function switchAboutTab(tabId) {
+            document.querySelectorAll('.about-tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.about-tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Helper to scroll and select services from cards
+        function scrollToBooking(serviceId) {
+            const selectEl = document.getElementById('bookingService');
+            if (selectEl) {
+                selectEl.value = serviceId;
+            }
+            
+            const bookingSection = document.getElementById('booking');
+            if (bookingSection) {
+                bookingSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
