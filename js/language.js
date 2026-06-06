@@ -18,7 +18,7 @@ const TRANSLATIONS = {
         // Hero Section
         'hero-badge': 'Premium Automotive Excellence',
         'hero-title': 'Your Vehicle Deserves the Best Care.',
-        'hero-desc': 'Professional vehicle repair, precision diagnostics, maintenance, and fleet management services in Arusha, Tanzania.',
+        'hero-desc': 'Professional car repair, precision diagnostics, auto mechanic maintenance, and corporate fleet management services in Arusha, Tanzania.',
         'btn-book-service': 'Book Service',
         'btn-call-now': 'Call Now',
         'stat-experience': 'Years Experience',
@@ -45,7 +45,7 @@ const TRANSLATIONS = {
         // About Us
         'about-tag': 'About Kiboko Garage',
         'about-title': 'African Excellence in Automotive Service',
-        'about-desc': 'Located in the Unga Ltd Area of Arusha, Kiboko Garage is a premier vehicle repair and fleet maintenance facility. We cater to individual car owners, corporate clients, and fleet operators who seek uncompromising precision, premium service, and long-term vehicle reliability.',
+        'about-desc': 'Located in the Unga Ltd Area of Arusha, Kiboko Garage is a premier car repair, auto mechanic, and fleet maintenance garage in Arusha. We cater to individual car owners and corporate clients who seek premium diagnostics and reliable vehicle servicing.',
         'tab-mission': 'Mission',
         'tab-vision': 'Vision',
         'tab-commitment': 'Commitment',
